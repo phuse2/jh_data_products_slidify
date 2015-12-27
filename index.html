@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Products Final Project</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Data Products Final Project">
+  <meta name="author" content="">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Data Products Final Project</h1>
+    <h2>Can you beat the casino?</h2>
+    <p><br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>The Game of Craps</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Craps, a popular casino game, consists of a wheel that displays numbers 1 through 37</li>
+<li>18 of the numbers are red, 18 are black, and 1 is green</li>
+<li>In a game, the wheel is spun and a ball is thrown onto the wheel, and the number and corresponding color the ball settles on determines the outcome</li>
+<li>There are many strategies, but a popular one is to simply place a bet on whether the ball lands on a black or a red space</li>
+<li>In this strategy, if you bet X dollars and the ball lands on the color you predict, you win X dollars</li>
+<li>However if the ball lands on another color, you lose the X dollars you bet</li>
+<li>Thus the probability of winning in this strategy is 18/37</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Your Goal</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Being a savvy gambler, you know that since the odds of winning are less 50%, if you play enough games sequentially you should eventually lose all your money because of the law of large numbers</li>
+<li>However, you have heard of many betting &quot;strategies&quot; that people implement to try to beat the odds</li>
+<li>For instance in one strategy a gambler will bet a fixed amount, if they win they step away from the table and take their winnings, but if they lose they double the bet amount, and continue iteratively until they win</li>
+<li>Although due to the law of large numbers you aren&#39;t sure these strategies make sense, but you&#39;ve also heard many casinos have banned them, so perhaps it&#39;s worth a shot!</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Your Plan</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>You are also well versed in the world of trading stocks and know of a popular trading strategy to &quot;limit losses and let gains ride&quot;</li>
+<li>In this strategy you make many trades and on each one you set a maximum allowable loss on each trade before closing the trade</li>
+<li>You also set a maximum allowable gain, at which point you close the trade and take your profits</li>
+<li>Applying this to craps, you wonder if you can devise a strategy where you sit down at a craps table with a Max Loss and Max Gain that you allow yourself, and when you hit either level you stop playing and walk away</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Shiny App Simulation</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Although this seems like a good idea, as a programmer you also want to put your idea to the test in a computer simulation before putting your hard-earned money at risk!</li>
+<li>The simulation you devise is this: you visit the casino 25 times, each time starting with $100</li>
+<li>At each casino visit, you play up to 100 games, betting $1 in each game, and if you ever reach your Max Loss or Max Gain you step away from the table and stop playing for that casino visit</li>
+<li>Having determined this simulation, you set your sights on testing different Max Loss and Max Gain parameters</li>
+<li>The Shiny app performs this function exactly, given a Max Loss and Max Gain parameter it will simulate playing 25 games as described above, and show theoretical results so you can evaluate your parameter choices</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Example Output</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+
+<ul>
+<li>In the above chart, the x-axis is the game iteration for each visit to the casino, the y-axis shows your wealth for each visit, the thin black lines are each a simulation of a visit to the casino, and the thick red or green line show the average of the results across the 25 casino visits</li>
+<li>If your average casino visit resulted in a gain the line will be green, and if it resulted in a loss it will be red</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='The Game of Craps'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Your Goal'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Your Plan'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Shiny App Simulation'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Example Output'>
+         5
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
